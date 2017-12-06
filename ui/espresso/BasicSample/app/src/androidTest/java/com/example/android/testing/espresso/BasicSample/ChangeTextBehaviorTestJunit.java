@@ -46,9 +46,15 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
  */
 @RunWith(AndroidJUnit4.class)
 @LargeTest
-public class ChangeTextBehaviorTest {
+public class ChangeTextBehaviorTestJunit {
 
-    public static final String STRING_TO_BE_TYPED = "Espresso";
+
+    private String STRING_TO_BE_TYPED;
+
+    @Before
+    public void initValidString(){
+        STRING_TO_BE_TYPED = "Espresso";
+    }
 
     /**
      * A JUnit {@link Rule @Rule} to launch your activity under test. This is a replacement
