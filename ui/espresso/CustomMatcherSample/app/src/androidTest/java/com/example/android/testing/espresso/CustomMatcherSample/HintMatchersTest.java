@@ -48,9 +48,12 @@ public class HintMatchersTest {
 
     private static final String INVALID_STRING_TO_BE_TYPED = "Earl Grey";
 
-    private static final String COFFEE_ENDING = "coffee?";
+//    private static final String COFFEE_ENDING = "coffee?";
+//
+//    private static final String COFFEE_INVALID_ENDING = "tea?";
+    private static final String COFFEE_ENDING = "tea?";
 
-    private static final String COFFEE_INVALID_ENDING = "tea?";
+    private static final String COFFEE_INVALID_ENDING = "coffee?";
 
     /**
      * A JUnit {@link Rule @Rule} to launch your activity under test. This is a replacement
@@ -89,7 +92,6 @@ public class HintMatchersTest {
     @Test
     public void hint_isDisplayedInEditText() {
         String hintText = mActivityRule.getActivity().getResources().getString(R.string.hint);
-
         onView(withId(R.id.editText)).check(matches(HintMatcher.withHint(hintText)));
     }
 

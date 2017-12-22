@@ -34,6 +34,7 @@ import static org.hamcrest.Matchers.is;
 public class HintMatcher {
 
     static Matcher<View> withHint(final String substring) {
+
         return withHint(is(substring));
     }
 
